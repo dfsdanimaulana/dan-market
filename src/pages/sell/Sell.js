@@ -26,6 +26,7 @@ export default function Sell() {
   const [thumbError, setThumbError] = useState(null)
   const [error, setError] = useState(null)
   const { response, addDocument } = useFirestore('items')
+  const [isPending, setIsPending] = useState(false)
 
   // form field values
   const [name, setName] = useState('')
@@ -63,6 +64,7 @@ export default function Sell() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsPending(true)
 
     try {
       // handle image upload
@@ -95,11 +97,13 @@ export default function Sell() {
       // add document to firestore
 
       await addDocument(itemToSell)
+      setIsPending(false)
       // redirect if success
       if (!response.error) {
         navigate('/')
       }
     } catch (err) {
+      setIsPending(false)
       setError(err.message)
     }
   }
@@ -144,7 +148,13 @@ export default function Sell() {
           onChange={(option) => setCategory(option.value)}
         />
       </label>
-      <button className="btn">Post</button>
+      {isPending ? (
+        <button className="btn" disabled>
+          Posting...
+        </button>
+      ) : (
+        <button className="btn">Post</button>
+      )}
       {error && <p className="error">{error}</p>}
     </form>
   )

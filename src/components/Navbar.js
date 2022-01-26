@@ -20,8 +20,8 @@ export default function Navbar() {
           <img src={Temple} alt="logo" />
           <span>Dan Market</span>
         </li>
-        
-        { !user ? (
+
+        {!user ? (
           <>
             <li>
               <Link to="/login">Login</Link>
@@ -33,10 +33,12 @@ export default function Navbar() {
         ) : (
           <>
             <li className="">
-              <img src={Cart} alt="logo" />
+              <Link to="/cart">
+                <img src={Cart} alt="logo" />
+              </Link>
             </li>
           </>
-        ) } 
+        )}
       </ul>
     </div>
   )

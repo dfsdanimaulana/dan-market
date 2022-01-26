@@ -4,9 +4,11 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuthContext } from '../hooks/useAuthContext'
 
 // pages
-import DashboardIcon from '../assets/dashboard_icon.svg'
-import AddIcon from '../assets/add_icon.svg'
 import Avatar from './Avatar'
+
+// icons
+import Sell from '../assets/sell.svg'
+import Store from '../assets/store.svg'
 
 // styles
 import './Sidebar.css'
@@ -27,13 +29,13 @@ export default function Sidebar() {
           <ul>
             <li>
               <NavLink to="/">
-                <img src={DashboardIcon} alt="dashboard icon" />
+                <img src={Store} alt="dashboard icon" />
                 <span>Dashboard</span>
               </NavLink>
             </li>
             <li>
               <NavLink to="/sell">
-                <img src={AddIcon} alt="dashboard icon" />
+                <img src={Sell} alt="dashboard icon" />
                 <span>Sell</span>
               </NavLink>
             </li>
