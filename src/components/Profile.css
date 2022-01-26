@@ -1,0 +1,23 @@
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.profile-body {
+  margin-bottom: 10px;
+}
+.profile-footer {
+  margin-bottom: 10px;
+}
+.profile-input {
+  display: flex;
+}
+.profile-input button {
+  border-radius: 0 4px 4px 0 !important;
+  border: 1px solid #ddd;
+  color: #777;
+}
+
+.profile-input input {
+  border-radius: 4px 0 0 4px !important;
+}

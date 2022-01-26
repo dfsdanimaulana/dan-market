@@ -1,0 +1,23 @@
+.card {
+  max-height: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.card-header  {
+  height: 250px;
+}
+.card-header img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-body {
+  height: 100px;
+  padding: 10px;
+}
+.card-footer {
+  height: 50px;
+}
