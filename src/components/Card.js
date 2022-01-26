@@ -2,9 +2,10 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useFirestore } from '../hooks/useFirestore'
 import { useAuthContext } from '../hooks/useAuthContext'
+
 // icons
-import CartAdd from '../assets/cartAdd.svg'
-import CartRemove from '../assets/cartRemove.svg'
+import CartAdd from '../assets/icons/cartAdd.svg'
+import CartRemove from '../assets/icons/cartRemove.svg'
 
 // styles
 import './Card.css'

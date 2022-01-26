@@ -7,8 +7,8 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import './Navbar.css'
 
 // icons
-import Temple from '../assets/temple.svg'
-import Cart from '../assets/cart.svg'
+import Temple from '../assets/icons/temple.svg'
+import Cart from '../assets/icons/cart.svg'
 
 export default function Navbar() {
   const { user } = useAuthContext()

@@ -7,8 +7,8 @@ import { useAuthContext } from '../hooks/useAuthContext'
 import Avatar from './Avatar'
 
 // icons
-import Sell from '../assets/sell.svg'
-import Store from '../assets/store.svg'
+import Sell from '../assets/icons/sell.svg'
+import Store from '../assets/icons/store.svg'
 
 // styles
 import './Sidebar.css'

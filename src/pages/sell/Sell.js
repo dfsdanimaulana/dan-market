@@ -94,8 +94,8 @@ export default function Sell() {
         rating: [],
         seller,
       }
+      
       // add document to firestore
-
       await addDocument(itemToSell)
       setIsPending(false)
       // redirect if success
