@@ -14,6 +14,7 @@ import Dashboard from './pages/dashboard/Dashboard'
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Profile from './components/Profile'
+import Sell from './pages/sell/Sell'
 
 function App() {
   const { user , authIsReady } = useAuthContext()
@@ -30,6 +31,7 @@ function App() {
               <Route  path="/login" element={!user ? <Login /> : <Navigate to='/'/> }/>
               <Route  path="/signup" element={!user ? <Signup /> : <Navigate to='/'/> }/>
               <Route  path="/profile" element={user ? <Profile /> : <Navigate to='/login'/> }/>
+              <Route  path="/sell" element={user ? <Sell /> : <Navigate to='/login'/> }/>
             </Routes>
           </div>
         </Router>
