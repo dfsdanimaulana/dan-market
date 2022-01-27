@@ -11,7 +11,7 @@ export default function Cart() {
   const { documents: carts, error } = useCollection('carts')
 
   return (
-    <div>
+    <div className='card-wrapper'>
       {carts && carts.length < 1 && <p>No items in cart</p>}
       {carts &&
         carts.map((cart) => (
