@@ -22,10 +22,12 @@ const categories = [
 
 export default function Sell() {
   const navigate = useNavigate()
+  
   const { user } = useAuthContext()
-  const [thumbError, setThumbError] = useState(null)
-  const [error, setError] = useState(null)
   const { response, addDocument } = useFirestore('items')
+  
+  const [error, setError] = useState(null)
+  const [thumbError, setThumbError] = useState(null)
   const [isPending, setIsPending] = useState(false)
 
   // form field values

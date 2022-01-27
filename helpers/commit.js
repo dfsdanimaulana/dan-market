@@ -34,7 +34,7 @@ function cbCommit(err, strout) {
   )
   setTimeout(() => {
     exec('git status', cbStatus)
-  }, 2000)
+  }, 1000)
 }
 
 function cbStatus(err, strout) {

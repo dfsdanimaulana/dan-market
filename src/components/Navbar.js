@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 
 // hooks
 import { useAuthContext } from '../hooks/useAuthContext'
+import { useCollection } from '../hooks/useCollection'
 
 // styles
 import './Navbar.css'
@@ -12,6 +13,7 @@ import Cart from '../assets/icons/cart.svg'
 
 export default function Navbar() {
   const { user } = useAuthContext()
+  const { documents } = useCollection('carts')
 
   return (
     <div className="navbar">
@@ -35,6 +37,7 @@ export default function Navbar() {
             <li className="">
               <Link to="/cart">
                 <img src={Cart} alt="logo" />
+                {documents && <span>{documents.length}</span>}
               </Link>
             </li>
           </>

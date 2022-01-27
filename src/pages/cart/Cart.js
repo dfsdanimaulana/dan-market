@@ -1,6 +1,10 @@
+// components
 import Card from '../../components/Card'
+
+// hooks
 import { useCollection } from '../../hooks/useCollection'
 
+// styles
 import './Cart.css'
 
 export default function Cart() {

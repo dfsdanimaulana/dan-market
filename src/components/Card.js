@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useFirestore } from '../hooks/useFirestore'
-import { useAuthContext } from '../hooks/useAuthContext'
+
+// hooks
+import { useCart } from '../hooks/useCart'
 
 // icons
 import CartAdd from '../assets/icons/cartAdd.svg'
@@ -11,29 +11,13 @@ import CartRemove from '../assets/icons/cartRemove.svg'
 import './Card.css'
 
 export default function Card({ item, cartId }) {
-  const { user } = useAuthContext()
-  const { addDocument, deleteDocument } = useFirestore('carts')
-  const [error, setError] = useState(null)
   const navigate = useNavigate()
+  
+  // hooks
+  const { addToCart, deleteFromCart, error } = useCart()
 
-  const addToCart = async () => {
-    const cartItems = {
-      uid: user.uid,
-      item,
-    }
-    try {
-      await addDocument(cartItems)
-    } catch (err) {
-      setError(err.message)
-    }
-  }
-
-  const removeToCart = async () => {
-    try {
-      await deleteDocument(cartId)
-    } catch (err) {
-      setError(err.message)
-    }
+  const handleAddToCart = async () => {
+    addToCart(item)
   }
 
   return (
@@ -50,11 +34,11 @@ export default function Card({ item, cartId }) {
         <button className="btn" onClick={()=> navigate(`/details/${item.id}`)}>Details</button>
         <button className="btn">Buy</button>
         {window.location.pathname === '/cart' ? (
-          <button className="btn" onClick={removeToCart}>
+          <button className="btn" onClick={()=> deleteFromCart(cartId)}>
             <img src={CartRemove} alt="cart add" />
           </button>
         ) : (
-          <button className="btn" onClick={addToCart}>
+          <button className="btn" onClick={handleAddToCart}>
             <img src={CartAdd} alt="cart add" />
           </button>
         )}

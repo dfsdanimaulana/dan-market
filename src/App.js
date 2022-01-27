@@ -16,12 +16,12 @@ import Login from './pages/login/Login'
 import Dashboard from './pages/dashboard/Dashboard'
 import Sell from './pages/sell/Sell'
 import Cart from './pages/cart/Cart'
+import CardDetails from './pages/details/CardDetails'
 
 // components
 import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar'
 import Profile from './components/Profile'
-import CardDetails from './components/CardDetails'
 
 function App() {
   const { user, authIsReady } = useAuthContext()
