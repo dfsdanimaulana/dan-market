@@ -32,7 +32,6 @@ export default function Card({ item, cartId }) {
       </div>
       <div className="card-footer">
         <button className="btn" onClick={()=> navigate(`/details/${item.id}`)}>Details</button>
-        <button className="btn">Buy</button>
         {window.location.pathname === '/cart' ? (
           <button className="btn" onClick={()=> deleteFromCart(cartId)}>
             <img src={CartRemove} alt="cart add" />
@@ -42,8 +41,9 @@ export default function Card({ item, cartId }) {
             <img src={CartAdd} alt="cart add" />
           </button>
         )}
+        <button className="btn">Buy</button>
       </div>
       {error && <p className="error">{error}</p>}
-    </div>
+    </div>  
   )
 }
