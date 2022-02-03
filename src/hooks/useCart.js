@@ -9,12 +9,14 @@ export const useCart =  () => {
   const { addDocument , deleteDocument} = useFirestore('carts')
   const { user } = useAuthContext()
   
+  // add item to cart  collection
   const addToCart = async (item) => {
     setError(null)
     try {
       await addDocument({
         item,
-        uid: user.uid
+        uid: user.uid,
+        count:1
       })
     } catch (err) {
       setError(err.message)

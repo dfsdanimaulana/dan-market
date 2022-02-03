@@ -21,12 +21,12 @@ export default function Card({ item, cartId }) {
   }
 
   return (
-    <div className="card">
+    <div className="card shadow">
       <div className="card-header">
         <img src={item.imageURL} alt="card items" />
       </div>
       <div className="card-body">
-        <h3>{item.name}</h3>
+        <h4>{item.name}</h4>
         <p>{item.price}</p>
         <p>{item.detail}</p>
       </div>

@@ -13,7 +13,7 @@ import Cart from '../assets/icons/cart.svg'
 
 export default function Navbar() {
   const { user } = useAuthContext()
-  const { documents } = useCollection('carts')
+  const { documents } = useCollection('carts', ['uid', '==', user.uid])
 
   return (
     <div className="navbar">

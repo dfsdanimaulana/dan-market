@@ -51,6 +51,11 @@ export default function Profile() {
             />
             <button onClick={changeUsername}>Update</button>
           </div>
+          <span>Email :</span>
+          <div className="profile-input">
+            <span>{user.email}</span>
+          
+          </div>
         </label>
         { error && <p className="error">{error}</p> }
       </div>

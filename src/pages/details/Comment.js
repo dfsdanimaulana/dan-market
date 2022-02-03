@@ -9,7 +9,7 @@ import Avatar from '../../components/Avatar'
 
 export default function Comment() {
   const { user } = useAuthContext()
-  const { addDocument, response } = useFirestore('comments')
+  const { addDocument } = useFirestore('comments')
   const { documents, error } = useCollection('comments')
 
   // state

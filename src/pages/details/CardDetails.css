@@ -1,4 +1,17 @@
-.details-wrapper img {
+.details-item {
+  display: flex;
   height: 300px;
-  width: 400px;
+}
+
+.details-header {
+  margin-right: 50px;
+}
+
+.details-header img {
+  height: 100%;
+  width: 300px;
+}
+
+.details-body {
+
 }

@@ -1,7 +1,7 @@
 .card {
+  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
   border-radius: 10px;
-  border: 1px solid #000;
   overflow: hidden;
   max-width: 400px;
 }
@@ -18,12 +18,12 @@
   padding: 10px;
 }
 
-.card-body h3 {
+.card-body h4 {
   color: rgb(15, 15, 15);
   font-size: 25px;
 }
 
-.card-body p:nth-child(2){
+.card-body p:nth-child(2) {
   font-size: 25px;
   font-weight: bold;
 }
@@ -33,17 +33,14 @@
   padding: 5px;
 }
 
-.card-footer button:first-child{
+.card-footer button:first-child {
   flex: 3;
 }
-.card-footer button:nth-child(2){
-  
+.card-footer button:nth-child(2) {
   margin-right: 5px;
   margin-left: 5px;
 }
-.card-footer button:nth-child(3){
+.card-footer button:nth-child(3) {
   color: #fff;
   background-color: rgb(24, 243, 53);
 }
-
-

@@ -11,6 +11,7 @@
 }
 .profile-input {
   display: flex;
+  margin-bottom: 20px;
 }
 .profile-input button {
   border-radius: 0 4px 4px 0 !important;
